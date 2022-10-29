@@ -1,6 +1,15 @@
-ALGORITHM algorithm_name
+ALGORITHM  "Sorting and searching "
 VAR
-    set_declarations
+    arr : ARRAY_OF INTEGER[10];
+    i, j , k : INTEGER ; 
 BEGIN
-    set_instructions
+    FOR i FROM 0 TO arr.length STEP 1  DO
+        k = arr[i] ; 
+        j = i - 1 ;
+        WHILE (j>= 0 AND arr[j] > k ) DO
+            arr[j+1] = arr[j]; 
+            j = j - 1 ; 
+        END_WHILE
+        arr[j + 1 ] = key ;
+    END_FOR
 END
